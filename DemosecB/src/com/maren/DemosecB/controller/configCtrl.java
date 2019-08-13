@@ -16,8 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(
 		urlPatterns = { "/configCtrl" }, 
 		initParams = { 
-				@WebInitParam(name = "UNIV", value = "CUTM"), 
-				@WebInitParam(name = "LOC", value = "BHUBANESWAR")
+				@WebInitParam(name = "UNIV", value = "CUTM"), //creating the parameter1
+				@WebInitParam(name = "LOC", value = "BHUBANESWAR") //creating the parameter2
 		})
 public class configCtrl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -27,9 +27,9 @@ public class configCtrl extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ServletConfig config = getServletConfig();
-		String univ = config.getInitParameter("UNIV");
-		String loc = config.getInitParameter("LOC");
-		response.getWriter().append("University is:" + univ + "At:"+loc);
+		String univ = config.getInitParameter("UNIV"); //getting the parameter1
+		String loc = config.getInitParameter("LOC");  //getting the parameter2
+		response.getWriter().append("University is:" + univ + "At:"+loc); //printing the parameter and the values
 	}
 
 	/**

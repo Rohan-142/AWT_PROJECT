@@ -19,7 +19,7 @@ public class HelloCtrl extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("HELLO WORLD");
+		response.getWriter().append("HELLO WORLD"); //printing the statement-142
 	}
 
 }

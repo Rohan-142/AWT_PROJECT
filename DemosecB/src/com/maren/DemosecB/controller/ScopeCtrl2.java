@@ -20,15 +20,15 @@ public class ScopeCtrl2 extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String req = (String) request.getAttribute("REQ");
-		String ses = (String) request.getSession().getAttribute("SES");
-		String app = (String) getServletContext().getAttribute("APP");
+		String req = (String) request.getAttribute("REQ");  //getting the request scope
+		String ses = (String) request.getSession().getAttribute("SES");  //getting the session scope
+		String app = (String) getServletContext().getAttribute("APP");  //getting the application scope
 		PrintWriter out = response.getWriter();
-		out.println("Request Scope:" +req);
+		out.println("Request Scope:" +req);  //printing the request scope
 		out.println("<br>");
-		out.println("Session Scope:" +ses);
+		out.println("Session Scope:" +ses);  //printing the session scope
 		out.println("<br>");
-		out.println("Application Scope:" +app);
+		out.println("Application Scope:" +app);  //printing the application scope
 	}
 
 }

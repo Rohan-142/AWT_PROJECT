@@ -18,7 +18,7 @@ public class DispatcherController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/configCtrl").forward(request , response);
+		request.getRequestDispatcher("/configCtrl").forward(request , response); //getting an another servlet using RequestDispatchers
 	}
 
 }

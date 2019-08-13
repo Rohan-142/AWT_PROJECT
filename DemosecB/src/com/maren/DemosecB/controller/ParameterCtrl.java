@@ -21,12 +21,12 @@ public class ParameterCtrl extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//retrieve request parameter
-		String name=request.getParameter("txtName");
-		String pass=request.getParameter("pass");
+		String name=request.getParameter("txtName");  //getting the name from the html
+		String pass=request.getParameter("pass");     //getting the password from the html
 		PrintWriter out=response.getWriter();
-		out.print("<b> Name <b> :"+ name);
+		out.print("<b> Name <b> :"+ name);        //printing the name
 		out.print("<br>");
-		out.print("<b> Password <b> :"+ pass);
+		out.print("<b> Password <b> :"+ pass);	  //printing the password
 		}
 
 	/**

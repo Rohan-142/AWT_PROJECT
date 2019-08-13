@@ -19,10 +19,10 @@ public class ScopeCtrl extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setAttribute("REQ" , "Request Scope");
-		request.getSession().setAttribute("SES" , "Session Scope");
-		getServletContext().setAttribute("APP", "Application Scope");
-		request.getRequestDispatcher("/ScopeCtrl2").forward(request , response);
+		request.setAttribute("REQ" , "Request Scope");  //creating the request scope
+		request.getSession().setAttribute("SES" , "Session Scope");  //creating the session scope
+		getServletContext().setAttribute("APP", "Application Scope"); //creating the application scope
+		request.getRequestDispatcher("/ScopeCtrl2").forward(request , response); //redirecting to a servlet using RequestDispatcher
 		}
 
 }
