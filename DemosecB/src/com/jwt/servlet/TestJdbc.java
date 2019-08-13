@@ -32,8 +32,6 @@ public class TestJdbc extends HttpServlet {
 				
 				Resultset rs = (Resultset) st.executeQuery("SELECT * from login.login");
 				while(((ResultSet) rs).next()) {
-					String user = ((ResultSet) rs).getString("us");
-					String pass = ((ResultSet) rs).getString("ps");
 					System.out.println("\nUSERID" +us+ "\nPASSWORD" +ps );
 				}
 				

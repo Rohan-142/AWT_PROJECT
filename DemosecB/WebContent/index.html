@@ -1,12 +1,28 @@
 <html>
     <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <title>login form</title>
+        <style>
+        div{
+        	  	align-items: center;
+  				padding-top: 200px;
+  				padding-bottom: 200px;
+        }
+        .box{                                                                                          
+      	border-radius:5px;
+      	height:8%;
+      	width:20%;
+      	vertical-align:middle;
+        		}
+        </style>
     </head>
     <body>
+    <div class="text-center">
         <form method="post" action="login">
-        Email ID:<input type="email" name="email" /><br/>
-        Password:<input type="password" name="pass" /><br/>
-        <input type="submit" value="login" />
+       Email <br> <input class="box" type="email" name="email" placeholder="Enter Email" required autofocus/><br/>
+        Password <br> <input class="box" type="password" name="pass" placeholder="Enter Password" required autofocus /><br/><br>
+        <button type="button" class="btn btn-primary btn-lg">Login</button>
         </form>
+	</div>
     </body>
-</html>
+</html>                            
